@@ -1,31 +1,30 @@
 :root {
-    
-/* ——————————————————————————————
+  /* ——————————————————————————————
             VARIABLES - COLORS
-—————————————————————————————— */    
-  --white:white;
-  --black:black;
-  --lime:#00ff00;
-  --dark-green:#1B2921;
-  --md-green:#68904D;
-  --trans-grey: rgb(188, 188, 188, 0.4);
-  --:;
-  --:;
-  --:;
-  --:;
-  --:;
-  --:;
-  
-/* ——————————————————————————————
+—————————————————————————————— */
+  --col-white: white;
+  --col-black: black;
+  --col-lime: #21f721;
+  --col-dark-green: #1b2921;
+  --col-md-green: #8c9287;
+  --col-trans-grey: rgb(188, 188, 188, 0.4);
+  --col-light-green: #a4b19b;
+  --col--green: #bec0bf;
+  --: ;
+  --: ;
+  --: ;
+  --: ;
+
+  /* ——————————————————————————————
  VARIABLES - FONT SIZE & FAMILY
--—————————————————————————————— */   
-  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-  
-  --font-:;
-  --font-:; /* add fonts here from font awesome I.e —font-fat-face: “April Fatface”, cursive; */
-  --font-:;
-  --font-:;
-  --font-oswald:'Oswald', sans-serif;;
+-—————————————————————————————— */
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+  --font-: ;
+  --font-: ; /* add fonts here from font awesome I.e —font-fat-face: “April Fatface”, cursive; */
+  --font-: ;
+  --font-: ;
+  --font-oswald: "Oswald", sans-serif;
   --font-xxs: 0.6em;
   --font-xs: 0.8em;
   --font-sm: 1em;
@@ -36,232 +35,421 @@
   --font-xxl: 4em;
 }
 
-
 /* ——————————————————————————————
      GENERAL - STYLING
 —————————————————————————————— */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color:var(--dark-green);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-	min-height:100vh;
-	font-family: var(--font-oswald); /* change this to generic font family */
-    color: var(--white);
-    margin: 0;
-    padding: 0;
+body {
+  min-height: 100vh;
+  font-family: var(--font-oswald); /* change this to generic font family */
+  font-weight: 100;
+  color: var(--col-white);
+  margin: 0;
+  padding: 0;
+  background: var(--col--green);
 }
-
-
-
-
-    
 
 /* ——————————————————————————————
             NAV
 —————————————————————————————— */
-#navigation-logo {
-    width: 200px;
-}
 
 
-nav.navigation{
-	position:relative;
-    align-items:center;
-    width: 100%;
-    z-index: 9998;
-    position: fixed;
-    
+nav.navigation {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  z-index: 9998;
+  position: fixed;
 }
 
-ul.nav-menu, ul.nav-menu li, ul.nav-menu li a{
-    list-style: none;
-    align-items: center;
-    padding: 10px 20px;
-    color: var(--lime);
-    display: flex;
-    justify-content:center;
+ul.nav-menu,
+ul.nav-menu li,
+ul.nav-menu li a {
+  list-style: none;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--col-lime);
+  display: flex;
+  justify-content: center;
 }
 
-
-@media screen and (max-width:768px){
-
-ul.nav-menu, ul.nav-menu li, ul.nav-menu li a{
-    
-    flex-direction: column;
-    
+ul.nav-menu {
+  padding-left: 10px;
+  padding-top: 10px;
 }
+ul.nav-menu li a {
+  height: 50px;
+  color: var(--col-white);
+  text-decoration: none;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-
-ul.nav-menu{
-	padding-left:10px;
-    padding-top: 10px;
+ul.nav-menu li a:hover {
+  color: var(--col-lime);
 }
-ul.nav-menu li a{
-	height:50px;
-	color: var(--trans-grey);
-	text-decoration:none;
-	-webkit-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+.nav-toggle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: transparent;
 }
-ul.nav-menu li a:hover{
-	color: var(--lime);
+span.icon-bar {
+  position: absolute;
+  right: 32px;
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--col-white);
+  -webkit-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
 }
-.nav-toggle{
-	display:none;
-	position:absolute;
-	top:0;
-	right:0;
-	width:50px;
-	height:50px;
-	cursor:pointer;
-	background: transparent;
+.icon-bar:nth-child(1) {
+  top: 17px;
 }
-span.icon-bar{
-	position:absolute;
-	right:32px;
-	display:block;
-	width:26px;
-	height:2px;
-	background-color:var(--lime);
-	-webkit-transition-duration: 0.6s;
-	-o-transition-duration: 0.6s;
-	transition-duration: 0.6s;
+.icon-bar:nth-child(2) {
+  top: 24px;
 }
-.icon-bar:nth-child(1){
-  top:17px;
+.icon-bar:nth-child(3) {
+  top: 31px;
 }
-.icon-bar:nth-child(2){
-  top:24px;
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--col-dark-green);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.icon-bar:nth-child(3){
-  top:31px;
-}
-.nav-overlay{
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-    background-color:var(--dark-green);
-	z-index:1;
-	opacity:0;
-	visibility:hidden;
-	-webkit-transition-duration: 0.3s;
-	-o-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-}
-.nav-overlay.active{
-	opacity:1;
-	visibility:visible;
-    
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ——————————————————————————————
     ICON BARS NAVIGATION
 —————————————————————————————— */
 
-.nav-toggle.active .icon-bar:nth-child(1){
-	top:24px;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
+.nav-toggle.active .icon-bar:nth-child(1) {
+  top: 24px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.nav-toggle.active .icon-bar:nth-child(2){
-	width:0;
+.nav-toggle.active .icon-bar:nth-child(2) {
+  width: 0;
 }
-.nav-toggle.active .icon-bar:nth-child(3){
-	top:24px;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+.nav-toggle.active .icon-bar:nth-child(3) {
+  top: 24px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 /* ——————————————————————————————
-         SITE CONTAINER
+         HEADER TEXT
 —————————————————————————————— */
 
-.head-text { /* change class to suit first section or div in html */
-	width:100%;
-	text-align: center;
-	background: url(../images/vand.PNG);
-	
-	background-position: center;
-	background-size: cover;
-	height: 70vh;
-	width: 100%;
+.head-text {
+  /* change class to suit first section or div in html */
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(129, 146, 141, 0.3),
+      rgba(48, 50, 58, 0.3)
+    ),
+    url(/images/vand.PNG);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
 }
-.head-text h1{
-    color: var(--white);
-    font-size: var(--font-);
-	background: transparent;
-	padding: 200px 0;
+.head-text h1 {
+  color: var(--col-white);
+  font-size: var(--font-sm);
+  background: transparent;
+  padding: 200px 0;
 }
 
+/* ——————————————————————————————
+         ABOUT SECTION
+—————————————————————————————— */
+
+.about h2 {
+  font-size: var(--font-sm);
+  text-align: center;
+  padding: 40px 0;
+  color: var(--col-dark-green);
+}
+.about p {
+  font-size: var(--font-xs);
+  text-align: center;
+  color: var(--col-dark-green);
+}
+
+.about img {
+  width: 100%;
+  opacity: 0.7;
+}
+
+
+.text-col-1  {
+	background: var(--col-md-green);
+	margin: 20px;
+	border-radius: 10px;
+	-webkit-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.9); 
+box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.5);
+}
+
+.text-col-2  {
+	background: var(--col-light-green);
+	margin: 20px;
+	border-radius: 10px;
+	-webkit-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.9); 
+box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.5);
+}
+
+.text-col-1 h3 {
+  font-size: var(--font-xs);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.text-col-1 p {
+	font-size: var(--font-xxs);
+	line-height: 1.5;
+	padding: 10px 20px;
+	color: var(--col-white);
+  }
+
+.text-col-2 h3 {
+  font-size: var(--font-xs);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.text-col-2 p {
+  font-size: var(--font-xxs);
+  line-height: 1.5;
+  padding: 10px 20px;
+}
+
+
+
+
+/* ——————————————————————————————
+         LATEST NEWS SECTION
+—————————————————————————————— */
+
+.latest-news {
+	text-align: center;
+	padding: 20px 10px;
+	background: var(--col-md-green);
+	
+}
+
+.latest-news h2 {
+	color: var(--col-white);
+	font-size: var(--font-sm);
+	text-transform: uppercase;
+}
+
+.latest-news h3 {
+	font-size: var(--font-xs);
+	text-align: center;
+	padding: 30px 10px;
+	color: var(--col-dark-green);
+}
+
+.latest-news a{
+	text-decoration: none;
+	color: var(--col--green);
+}
+
+
+/* ——————————————————————————————
+         DESIGN / QUOTE SECTION
+—————————————————————————————— */
+.design {
+	background: var(--col-white);
+	
+}
+
+.design p  {
+	font-size: var(--font-xxs);
+	color: var(--col-black);
+	padding: 30px;
+	font-style: italic;
+	font-weight: 100;
+	line-height: 2;
+	text-align: center;
+
+}
+
+.design img {
+	width: 100%;
+	
+}
+
+.design h2 {
+	color: var(--col-dark-green);
+	font-size: var(--font-sm);
+	text-align: center;
+	padding: 10px;
+}
+
+
+/* ——————————————————————————————————-
+     		MEET THE TEAM
+————————————————————————————————————— */
+
+
+.team-grid {
+	text-align: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.team-grid h2 {
+	padding: 20px 0px;
+}
+
+.team-box {
+	margin: 5px;
+	background: var(--col-md-green);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.team-box h3 {
+	font-size: var(--font-sm);
+	padding: 5px;
+	color: var(--col-lime);
+}
+.team-box h4 {
+	font-size: var(--font-xs);
+	padding: 5px;
+}
+
+.team-box p {
+	font-size: var(--font-xxs);
+	padding: 5px;
+}
+
+
+/* ——————————————————————————————————-
+     		MEDIA / CRITIQUES
+————————————————————————————————————— */
+
+
+.media {
+	text-align: center;
+	align-items: center;
+	padding: 20px;
+	background: var(--col-dark-green);
+	
+}
+
+.media h3 {
+	color: var(--col-dark-green);
+	font-size: var(--font-xs);
+	padding-bottom: 30px;
+}
+
+.media-box {
+	margin: 10px;
+	background: var(--col-md-green);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.media-box h3 {
+	font-size: var(--font-xs);
+	padding: 10px;
+	color: var(--col-white);
+}
+
+
+.media-box i {
+	color: var(--col-dark-green);
+	padding: 3px;
+}
 
 /* ——————————————————————————————————-
      MEDIA QUERIES - MOBILE DEVICES
 ————————————————————————————————————— */
 
-
-
 /* ------- Navigation Menu ------- */
 
-@media screen and (max-width:900px){
-	ul.nav-menu{
-		position:absolute;
-		top:50px;
-		width:100%;
-		height:0;
-		padding:0;
-		overflow:hidden;
-	}
-	ul.nav-menu.active{
-		height:auto;
-	}
-	ul.nav-menu li{
-		width:100%;
-	}
-	ul.nav-menu li a{
-		width:100%;
-		padding:20px 0;
-		text-align:center;
-		background-color: var(--dark-green); /* background of toggle menu */
-	}
-	ul.nav-menu li a:hover{
-		background-color:var(--white);
-	}
-	.nav-toggle{
-		display:block;
-	}
+@media screen and (max-width: 900px) {
+  ul.nav-menu {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  ul.nav-menu.active {
+    height: auto;
+  }
+  ul.nav-menu li {
+    width: 100%;
+  }
+  ul.nav-menu li a {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--col-black); /* background of toggle menu */
+  }
+  ul.nav-menu li a:hover {
+    background-color: var(--col-white);
+  }
+  .nav-toggle {
+    display: block;
+  }
 }
-@media screen and (max-width:768px){
-	.nav-overlay.active{
-		visibility:hidden;
-		opacity:0;
-	}
+@media screen and (max-width: 768px) {
+  .nav-overlay.active {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
-
+@media screen and (max-width: 768px) {
+  ul.nav-menu,
+  ul.nav-menu li,
+  ul.nav-menu li a {
+    flex-direction: column;
+  }
+}
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - SMALL TABLET STYLES
 ——————————————————————————————————————————- */
 
-@media screen and (min-width:800px) {
-    
-    
+@media screen and (min-width: 800px) {
 }
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - LARGE TABLETS & LAPTOP  STYLES
 ——————————————————————————————————————————- */
 
-@media screen and (min-width:1100px) {
-    
-    
+@media screen and (min-width: 1100px) {
 }
