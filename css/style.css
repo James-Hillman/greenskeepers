@@ -5,12 +5,12 @@
   --col-white: white;
   --col-black: black;
   --col-lime: #21f721;
-  --col-dark-green: #1b2921;
+  --col-dark-green: #2a3f33;
   --col-md-green: #8c9287;
   --col-trans-grey: rgb(188, 188, 188, 0.4);
   --col-light-green: #a4b19b;
   --col--green: #bec0bf;
-  --: ;
+  --col--grey: #83b19a;
   --: ;
   --: ;
   --: ;
@@ -58,7 +58,6 @@ body {
 /* ——————————————————————————————
             NAV
 —————————————————————————————— */
-
 
 nav.navigation {
   position: relative;
@@ -182,7 +181,7 @@ span.icon-bar {
 }
 .head-text h1 {
   color: var(--col-white);
-  font-size: var(--font-sm);
+  font-size: var(--font-ms);
   background: transparent;
   padding: 200px 0;
 }
@@ -192,15 +191,16 @@ span.icon-bar {
 —————————————————————————————— */
 
 .about h2 {
-  font-size: var(--font-sm);
+  font-size: var(--font-ms);
   text-align: center;
   padding: 40px 0;
   color: var(--col-dark-green);
 }
 .about p {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   text-align: center;
   color: var(--col-dark-green);
+  padding: 20px;
 }
 
 .about img {
@@ -208,187 +208,228 @@ span.icon-bar {
   opacity: 0.7;
 }
 
-
-.text-col-1  {
-	background: var(--col-md-green);
-	margin: 20px;
-	border-radius: 10px;
-	-webkit-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.9); 
-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.5);
+.text-col-1 {
+  background: var(--col-md-green);
+  margin: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
+  box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
 }
 
-.text-col-2  {
-	background: var(--col-light-green);
-	margin: 20px;
-	border-radius: 10px;
-	-webkit-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.9); 
-box-shadow: 5px 2px 14px 0px rgba(27,41,33,0.5);
+.text-col-2 {
+  background: var(--col-light-green);
+  margin: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
+  box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
 }
 
 .text-col-1 h3 {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   text-align: center;
   padding: 10px 0;
 }
 
 .text-col-1 p {
-	font-size: var(--font-xxs);
-	line-height: 1.5;
-	padding: 10px 20px;
-	color: var(--col-white);
-  }
+  font-size: var(--font-xs);
+  line-height: 1.5;
+  padding: 10px 20px;
+  color: var(--col-white);
+}
 
 .text-col-2 h3 {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   text-align: center;
   padding: 10px 0;
 }
 
 .text-col-2 p {
-  font-size: var(--font-xxs);
+  font-size: var(--font-xs);
   line-height: 1.5;
   padding: 10px 20px;
 }
-
-
-
 
 /* ——————————————————————————————
          LATEST NEWS SECTION
 —————————————————————————————— */
 
 .latest-news {
-	text-align: center;
-	padding: 20px 10px;
-	background: var(--col-md-green);
-	
+  text-align: center;
+  padding: 50px 10px;
+  background: url(/images/flag.JPG);
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(129, 146, 141, 0.7),
+      rgba(48, 50, 58, 0.7)
+    ),
+    url(/images/flag.JPG);
 }
 
 .latest-news h2 {
-	color: var(--col-white);
-	font-size: var(--font-sm);
-	text-transform: uppercase;
+  color: var(--col-white);
+  font-size: var(--font-ms);
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .latest-news h3 {
-	font-size: var(--font-xs);
-	text-align: center;
-	padding: 30px 10px;
-	color: var(--col-dark-green);
+  font-size: var(--font-xs);
+  text-align: center;
+  padding: 30px 10px;
+  color: yellow;
 }
 
-.latest-news a{
-	text-decoration: none;
-	color: var(--col--green);
+.latest-news a {
+  text-decoration: none;
+  color: greenyellow;
+  font-weight: 700;
+  line-height: 3;
 }
-
 
 /* ——————————————————————————————
          DESIGN / QUOTE SECTION
 —————————————————————————————— */
 .design {
-	background: var(--col-white);
-	
+  background: var(--col-white);
 }
 
-.design p  {
-	font-size: var(--font-xxs);
-	color: var(--col-black);
-	padding: 30px;
-	font-style: italic;
-	font-weight: 100;
-	line-height: 2;
-	text-align: center;
-
+.design p {
+  font-size: var(--font-xxs);
+  color: var(--col-black);
+  padding: 30px;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 2;
+  text-align: center;
 }
 
 .design img {
-	width: 100%;
-	
+  width: 100%;
 }
 
 .design h2 {
-	color: var(--col-dark-green);
-	font-size: var(--font-sm);
-	text-align: center;
-	padding: 10px;
+  color: var(--col-dark-green);
+  font-size: var(--font-sm);
+  text-align: center;
+  padding: 10px;
 }
-
 
 /* ——————————————————————————————————-
      		MEET THE TEAM
 ————————————————————————————————————— */
 
-
 .team-grid {
-	text-align: center;
-	align-items: center;
-	padding: 40px;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .team-grid h2 {
-	padding: 20px 0px;
+  padding: 20px 0px;
 }
 
 .team-box {
-	margin: 5px;
-	background: var(--col-md-green);
-	padding: 20px;
-	border-radius: 10px;
+  margin: 5px;
+  background: var(--col-md-green);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .team-box h3 {
-	font-size: var(--font-sm);
-	padding: 5px;
-	color: var(--col-lime);
+  font-size: var(--font-sm);
+  padding: 5px;
+  color: var(--col-lime);
 }
 .team-box h4 {
-	font-size: var(--font-xs);
-	padding: 5px;
+  font-size: var(--font-xs);
+  padding: 5px;
 }
 
 .team-box p {
-	font-size: var(--font-xxs);
-	padding: 5px;
+  font-size: var(--font-xxs);
+  padding: 5px;
 }
-
 
 /* ——————————————————————————————————-
      		MEDIA / CRITIQUES
 ————————————————————————————————————— */
 
-
 .media {
-	text-align: center;
-	align-items: center;
-	padding: 20px;
-	background: var(--col-dark-green);
-	
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  background: var(--col-dark-green);
 }
 
 .media h3 {
-	color: var(--col-dark-green);
-	font-size: var(--font-xs);
-	padding-bottom: 30px;
+  color: var(--col--grey);
+  font-size: var(--font-xs);
+  padding-bottom: 30px;
 }
 
 .media-box {
-	margin: 10px;
-	background: var(--col-md-green);
-	padding: 20px;
-	border-radius: 10px;
+  margin: 10px;
+  background: var(--col-md-green);
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .media-box h3 {
-	font-size: var(--font-xs);
-	padding: 10px;
-	color: var(--col-white);
+  font-size: var(--font-xs);
+  padding: 10px;
+  color: var(--col-white);
 }
 
-
 .media-box i {
-	color: var(--col-dark-green);
-	padding: 3px;
+  color: var(--col-dark-green);
+  padding: 3px;
+}
+
+/* ——————————————————————————————————-
+     		        FOOTER
+————————————————————————————————————— */
+
+.footer {
+ 
+  text-align: center;
+  height: 200px;
+}
+
+.useful-links {
+  padding: 20px;
+}
+
+.useful-links li {
+  list-style: none;
+  padding-top: 10px;
+}
+.useful-links a {
+  text-decoration: none;
+  font-size: var(--font-xs);
+  font-weight: bold;
+  color: var(--col-dark-green);
+  
+}
+
+.follow-us {
+  padding: 20px;
+}
+
+.follow-us h3 {
+  font-size: var(--font-sm);
+}
+
+.follow-us i {
+  color: var(--col-dark-green);
+  padding: 5px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: var(--font-xxs);
+  text-align: center;
+  color: var(--col-dark-green);
+  padding: 10px;
 }
 
 /* ——————————————————————————————————-
