@@ -227,47 +227,34 @@ span.icon-bar {
 }
 
 
-.text-col-1 {
+.text-col{
   background: var(--col-md-green);
   margin: 20px;
   border-radius: 10px;
   -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
   box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
+  width: 400px;
 }
 
-.text-col-2 {
-  background: var(--col-light-green);
-  margin: 20px;
-  border-radius: 10px;
-  -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
-  box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
+.about-flex {
+ justify-content: center;
+ flex-wrap: wrap;
+ display: flex;
 }
 
-.text-col-1 h3 {
+.text-col h3 {
   font-size: var(--font-sm);
   text-align: center;
   padding: 10px 0;
 }
 
-.text-col-1 p {
+.text-col p {
   font-size: var(--font-xs);
   line-height: 1.5;
   padding: 10px 20px;
-  color: var(--col-white);
+  color: var(--col-dark-green);
 }
 
-.text-col-2 h3 {
-  font-size: var(--font-sm);
-  text-align: center;
-  padding: 10px 0;
-}
-
-.text-col-2 p {
-  font-size: var(--font-xs);
-  line-height: 1.5;
-  padding: 10px 20px;
-  color: var(--col-white);
-}
 
 /* ——————————————————————————————
          LATEST NEWS SECTION
@@ -307,13 +294,14 @@ span.icon-bar {
 }
 
 /* ——————————————————————————————
-         FILLER SECTION SECTION
+      LATEST COURSES
 —————————————————————————————— */
 
 
 .latest-courses img {
   width: 100%;
   padding: 10px 30px;
+  
 }
 
 .latest-courses-head {
@@ -533,9 +521,7 @@ span.icon-bar {
   color: var(--col-dark-green);
   }
 
- .text-col-2 {
-  margin-bottom: 50px;
- } 
+
 
 
 
@@ -545,12 +531,7 @@ span.icon-bar {
   padding-bottom: 60px;
  }
 
- .team-head {
-  text-align: center;
-  padding: 30px;
- }
-
- .media {
+  .media {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
  }
@@ -564,25 +545,19 @@ span.icon-bar {
 }
 }
 
-
 /* ———————————————————————————————————————-
      MEDIA QUERIES - 800px and Above
 ——————————————————————————————————————————- */
 @media screen and (min-width: 800px){
-.about-grid {
-  display: flex;
-  
-}
+
 
 .about img {
   display: none;
 }
 
-.latest-courses {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.head-text img {
+  padding: 50px 40px;
 }
-
 
 }
 
@@ -593,4 +568,38 @@ span.icon-bar {
 ——————————————————————————————————————————- */
 
 @media screen and (min-width: 1100px) {
+  .head-text img {
+    width: 50%;
+  }
+  .latest-courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .latest-news h2 {
+    color: var(--col-white);
+    font-size: var(--font-lg);
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  
+  .latest-news h3 {
+    font-size: var(--font-md);
+    text-align: center;
+    padding: 30px 10px;
+    color: yellow;
+  }
+  
+  .latest-news a {
+    text-decoration: none;
+    color: greenyellow;
+    font-weight: 700;
+    line-height: 3;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+   }
 }
