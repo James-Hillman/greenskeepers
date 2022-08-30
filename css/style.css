@@ -1,3 +1,12 @@
+
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+
 :root {
   /* ——————————————————————————————
             VARIABLES - COLORS
@@ -11,17 +20,17 @@
   --col-light-green: #a4b19b;
   --col--green: #bec0bf;
   --col--grey: #83b19a;
-  --: ;
+  --col--md-grey: #5d5e60;
   --: ;
   --: ;
 
   /* ——————————————————————————————
  VARIABLES - FONT SIZE & FAMILY
 -—————————————————————————————— */
-  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
-  --font-: ;
-  --font-: ; /* add fonts here from font awesome I.e —font-fat-face: “April Fatface”, cursive; */
+
+  --font-Header:'Bree Serif', serif;
+  --font-: ; 
   --font-: ;
   --font-: ;
   --font-oswald: "Oswald", sans-serif;
@@ -53,6 +62,10 @@ body {
   margin: 0;
   padding: 0;
   background: var(--col--green);
+}
+
+p {
+  font-weight: 400;
 }
 
 /* ——————————————————————————————
@@ -179,17 +192,22 @@ span.icon-bar {
   height: 70vh;
   width: 100%;
 }
+
+.head-text img {
+  width: 60%;
+  margin-top: 40px;
+}
 .head-text h1 {
   color: var(--col-white);
-  font-size: var(--font-ms);
+  font-size: var(--font-lg);
   background: transparent;
-  padding: 200px 0;
+  padding: 100px 0;
+  font-family: var(--font-Header);
 }
 
 /* ——————————————————————————————
          ABOUT SECTION
 —————————————————————————————— */
-
 .about h2 {
   font-size: var(--font-ms);
   text-align: center;
@@ -207,6 +225,7 @@ span.icon-bar {
   width: 100%;
   opacity: 0.7;
 }
+
 
 .text-col-1 {
   background: var(--col-md-green);
@@ -247,6 +266,7 @@ span.icon-bar {
   font-size: var(--font-xs);
   line-height: 1.5;
   padding: 10px 20px;
+  color: var(--col-white);
 }
 
 /* ——————————————————————————————
@@ -273,7 +293,7 @@ span.icon-bar {
 }
 
 .latest-news h3 {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   text-align: center;
   padding: 30px 10px;
   color: yellow;
@@ -287,32 +307,9 @@ span.icon-bar {
 }
 
 /* ——————————————————————————————
-         DESIGN / QUOTE SECTION
+         FILLER SECTION SECTION
 —————————————————————————————— */
-.design {
-  background: var(--col-white);
-}
 
-.design p {
-  font-size: var(--font-xxs);
-  color: var(--col-black);
-  padding: 30px;
-  font-style: italic;
-  font-weight: 100;
-  line-height: 2;
-  text-align: center;
-}
-
-.design img {
-  width: 100%;
-}
-
-.design h2 {
-  color: var(--col-dark-green);
-  font-size: var(--font-sm);
-  text-align: center;
-  padding: 10px;
-}
 
 /* ——————————————————————————————————-
      		MEET THE TEAM
@@ -359,6 +356,7 @@ span.icon-bar {
   align-items: center;
   padding: 20px;
   background: var(--col-dark-green);
+
 }
 
 .media h3 {
@@ -399,6 +397,12 @@ span.icon-bar {
   padding: 20px;
 }
 
+.useful-links p {
+  color: var(--col--md-grey);
+  font-weight: 800;
+  padding-top: 10px;
+}
+
 .useful-links li {
   list-style: none;
   padding-top: 10px;
@@ -408,7 +412,6 @@ span.icon-bar {
   font-size: var(--font-xs);
   font-weight: bold;
   color: var(--col-dark-green);
-  
 }
 
 .follow-us {
@@ -417,6 +420,7 @@ span.icon-bar {
 
 .follow-us h3 {
   font-size: var(--font-sm);
+  color: var(--col-dark-green);
 }
 
 .follow-us i {
@@ -481,12 +485,88 @@ span.icon-bar {
   }
 }
 
+
 /* ———————————————————————————————————————-
-     MEDIA QUERIES - SMALL TABLET STYLES
+     MEDIA QUERIES - 450px and Above
+——————————————————————————————————————————- */
+@media screen and (min-width:450px){
+.media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+
+
+
+
+/* ———————————————————————————————————————-
+     MEDIA QUERIES - 576 pixels and above
 ——————————————————————————————————————————- */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 576px) {
+  .head-text img {
+    width: 70%;
+  }
+  .head-text h1 {
+    font-size: var(--font-xl);
+    padding: 50px 40px;
+  }
+
+  .about h2 {
+  font-size: var(--font-md);
+  text-align: center;
+  padding: 60px 20px 0px 20px;
+  color: var(--col-dark-green);
+  }
+
+ .text-col-2 {
+  margin-bottom: 50px;
+ } 
+
+
+
+ .team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 60px;
+ }
+
+ .team-head {
+  text-align: center;
+  padding: 30px;
+ }
+
+ .media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ }
+
+ .media h3 {
+  padding-top: 20px;
+ }
 }
+
+
+/* ———————————————————————————————————————-
+     MEDIA QUERIES - 800px and Above
+——————————————————————————————————————————- */
+@media screen and (min-width: 800px){
+.about-grid {
+  display: flex;
+  
+}
+
+.about img {
+  display: none;
+}
+
+
+
+
+}
+
+
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - LARGE TABLETS & LAPTOP  STYLES
