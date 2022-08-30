@@ -21,7 +21,7 @@
   --col--green: #bec0bf;
   --col--grey: #83b19a;
   --col--md-grey: #5d5e60;
-  --: ;
+  --col--dark-grey: #353536;
   --: ;
 
   /* ——————————————————————————————
@@ -52,10 +52,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
-  min-height: 100vh;
+  
   font-family: var(--font-oswald); /* change this to generic font family */
   font-weight: 100;
   color: var(--col-white);
@@ -78,6 +79,7 @@ nav.navigation {
   width: 100%;
   z-index: 9998;
   position: fixed;
+  background: var(--col-md-green);
 }
 
 ul.nav-menu,
@@ -151,7 +153,7 @@ span.icon-bar {
   transition-duration: 0.3s;
 }
 .nav-overlay.active {
-  opacity: 1;
+  opacity: 0.4;
   visibility: visible;
 }
 
@@ -208,6 +210,8 @@ span.icon-bar {
 /* ——————————————————————————————
          ABOUT SECTION
 —————————————————————————————— */
+
+
 .about h2 {
   font-size: var(--font-ms);
   text-align: center;
@@ -234,22 +238,25 @@ span.icon-bar {
   -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
   box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
   width: 400px;
+  height: 300px;
 }
 
 .about-flex {
  justify-content: center;
+ align-self: center;
  flex-wrap: wrap;
  display: flex;
 }
 
 .text-col h3 {
-  font-size: var(--font-sm);
+  font-size: var(--font-md);
   text-align: center;
-  padding: 10px 0;
+  padding: 30px 0;
+
 }
 
 .text-col p {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   line-height: 1.5;
   padding: 10px 20px;
   color: var(--col-dark-green);
@@ -341,12 +348,10 @@ span.icon-bar {
 .team-box h4 {
   font-size: var(--font-xs);
   padding: 5px;
+  color: var(--col--dark-grey);
 }
 
-.team-box p {
-  font-size: var(--font-xxs);
-  padding: 5px;
-}
+
 
 /* ——————————————————————————————————-
      		MEDIA / CRITIQUES
@@ -443,7 +448,7 @@ span.icon-bar {
 
 /* ------- Navigation Menu ------- */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   ul.nav-menu {
     position: absolute;
     top: 50px;
@@ -462,7 +467,7 @@ span.icon-bar {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    background-color: var(--col-black); /* background of toggle menu */
+    background-color: var(--col-md-green); /* background of toggle menu */
   }
   ul.nav-menu li a:hover {
     background-color: var(--col-white);
@@ -495,6 +500,8 @@ span.icon-bar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
  }
+
+ 
 }
 
 
@@ -507,7 +514,8 @@ span.icon-bar {
 
 @media screen and (min-width: 576px) {
   .head-text img {
-    width: 70%;
+    width: 100%;
+    margin-top: 80px
   }
   .head-text h1 {
     font-size: var(--font-xl);
@@ -550,6 +558,9 @@ span.icon-bar {
 ——————————————————————————————————————————- */
 @media screen and (min-width: 800px){
 
+  .head-text img {
+    width: 60%;
+  }
 
 .about img {
   display: none;
@@ -569,7 +580,7 @@ span.icon-bar {
 
 @media screen and (min-width: 1100px) {
   .head-text img {
-    width: 50%;
+    width: 80%;
   }
   .latest-courses {
     display: grid;
@@ -599,7 +610,15 @@ span.icon-bar {
 
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 180px 0px;
   
+   }
+
+   .team-grid h2 {
+    font-size: var(--font-xl);
+   }
+   .team-grid h3 {
+    font-size: var(--font-md);
    }
 }
