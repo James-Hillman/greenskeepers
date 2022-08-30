@@ -186,7 +186,7 @@ span.icon-bar {
       rgba(129, 146, 141, 0.3),
       rgba(48, 50, 58, 0.3)
     ),
-    url(/images/vand.PNG);
+    url(/images/wrapper.PNG);
   background-position: center;
   background-size: cover;
   height: 70vh;
@@ -311,6 +311,19 @@ span.icon-bar {
 —————————————————————————————— */
 
 
+.latest-courses img {
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.latest-courses-head {
+  text-align: center;
+  font-family: var(--font-oswald);
+  font-size: var(--font-md);
+  color: var(--col-dark-green);
+  padding: 15px 30px;
+}
+
 /* ——————————————————————————————————-
      		MEET THE TEAM
 ————————————————————————————————————— */
@@ -335,7 +348,7 @@ span.icon-bar {
 .team-box h3 {
   font-size: var(--font-sm);
   padding: 5px;
-  color: var(--col-lime);
+  color: var(--col-dark-green);
 }
 .team-box h4 {
   font-size: var(--font-xs);
@@ -545,6 +558,10 @@ span.icon-bar {
  .media h3 {
   padding-top: 20px;
  }
+ .latest-courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 
@@ -561,7 +578,10 @@ span.icon-bar {
   display: none;
 }
 
-
+.latest-courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 
 }
