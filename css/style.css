@@ -49,6 +49,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,6 +59,7 @@ body {
   margin: 0;
   padding: 0;
   background: var(--col--green);
+  
 }
 
 p {
@@ -318,7 +320,7 @@ span.icon-bar {
 .team-grid {
   text-align: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   background: var(--col-white);
 }
 
@@ -335,8 +337,10 @@ span.icon-bar {
 .team-box {
   margin: 5px;
   background: var(--col-md-green);
-  padding: 20px;
+  padding-top: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 5px 2px 14px 0px rgba(30, 149, 23, 0.9);
+  box-shadow: 5px 2px 14px 0px rgba(33, 150, 29, 0.5);
 }
 
 .team-box h3 {
@@ -373,10 +377,12 @@ span.icon-bar {
   background: var(--col--mid-green);
   padding: 20px;
   border-radius: 10px;
+  -webkit-box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.9);
+  box-shadow: 5px 2px 14px 0px rgba(27, 41, 33, 0.5);
 }
 
 .media-box h3 {
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   padding: 10px;
   color: var(--col-white);
 }
