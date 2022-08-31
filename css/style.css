@@ -1,11 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
-  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-  @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
 
 :root {
   /* ——————————————————————————————
@@ -22,15 +19,15 @@
   --col--grey: #83b19a;
   --col--md-grey: #5d5e60;
   --col--dark-grey: #353536;
-  --: ;
+  --col--mid-green: #71977e;
+
 
   /* ——————————————————————————————
  VARIABLES - FONT SIZE & FAMILY
 -—————————————————————————————— */
 
-
-  --font-Header:'Bree Serif', serif;
-  --font-: ; 
+  --font-Header: "Bree Serif", serif;
+  --font-: ;
   --font-: ;
   --font-: ;
   --font-oswald: "Oswald", sans-serif;
@@ -52,11 +49,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
-  
   font-family: var(--font-oswald); /* change this to generic font family */
   font-weight: 100;
   color: var(--col-white);
@@ -98,7 +93,7 @@ ul.nav-menu {
   padding-top: 10px;
 }
 ul.nav-menu li a {
-  height: 50px;
+  height: 80px;
   color: var(--col-white);
   text-decoration: none;
   -webkit-transition-duration: 0.3s;
@@ -211,7 +206,6 @@ span.icon-bar {
          ABOUT SECTION
 —————————————————————————————— */
 
-
 .about h2 {
   font-size: var(--font-ms);
   text-align: center;
@@ -230,8 +224,7 @@ span.icon-bar {
   opacity: 0.7;
 }
 
-
-.text-col{
+.text-col {
   background: var(--col-md-green);
   margin: 20px;
   border-radius: 10px;
@@ -242,17 +235,16 @@ span.icon-bar {
 }
 
 .about-flex {
- justify-content: center;
- align-self: center;
- flex-wrap: wrap;
- display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .text-col h3 {
   font-size: var(--font-md);
   text-align: center;
   padding: 30px 0;
-
 }
 
 .text-col p {
@@ -261,7 +253,6 @@ span.icon-bar {
   padding: 10px 20px;
   color: var(--col-dark-green);
 }
-
 
 /* ——————————————————————————————
          LATEST NEWS SECTION
@@ -303,12 +294,13 @@ span.icon-bar {
 /* ——————————————————————————————
       LATEST COURSES
 —————————————————————————————— */
-
+.latest-courses {
+  padding: 50px 0px;
+}
 
 .latest-courses img {
   width: 100%;
   padding: 10px 30px;
-  
 }
 
 .latest-courses-head {
@@ -327,10 +319,17 @@ span.icon-bar {
   text-align: center;
   align-items: center;
   padding: 20px;
+  background: var(--col-white);
+}
+
+.team-grid img {
+  width: 50px;
+  border-radius: 50%;
 }
 
 .team-grid h2 {
   padding: 20px 0px;
+  color: var(--col--dark-grey);
 }
 
 .team-box {
@@ -351,8 +350,6 @@ span.icon-bar {
   color: var(--col--dark-grey);
 }
 
-
-
 /* ——————————————————————————————————-
      		MEDIA / CRITIQUES
 ————————————————————————————————————— */
@@ -361,19 +358,19 @@ span.icon-bar {
   text-align: center;
   align-items: center;
   padding: 20px;
-  background: var(--col-dark-green);
-
+  background: var(--col--green);
+  
 }
 
 .media h3 {
-  color: var(--col--grey);
-  font-size: var(--font-xs);
+  color: var(--col-dark-green);
+  font-size: var(--font-sm);
   padding-bottom: 30px;
 }
 
 .media-box {
   margin: 10px;
-  background: var(--col-md-green);
+  background: var(--col--mid-green);
   padding: 20px;
   border-radius: 10px;
 }
@@ -394,7 +391,6 @@ span.icon-bar {
 ————————————————————————————————————— */
 
 .footer {
- 
   text-align: center;
   height: 200px;
 }
@@ -457,6 +453,10 @@ span.icon-bar {
     padding: 0;
     overflow: hidden;
   }
+
+  nav.navigation {
+    position: static;
+  }
   ul.nav-menu.active {
     height: auto;
   }
@@ -491,22 +491,15 @@ span.icon-bar {
   }
 }
 
-
 /* ———————————————————————————————————————-
      MEDIA QUERIES - 450px and Above
 ——————————————————————————————————————————- */
-@media screen and (min-width:450px){
-.media {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
- }
-
- 
+@media screen and (min-width: 450px) {
+  .media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-
-
-
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - 576 pixels and above
@@ -514,8 +507,8 @@ span.icon-bar {
 
 @media screen and (min-width: 576px) {
   .head-text img {
-    width: 100%;
-    margin-top: 80px
+    width: 80%;
+    margin-top: 80px;
   }
   .head-text h1 {
     font-size: var(--font-xl);
@@ -523,56 +516,44 @@ span.icon-bar {
   }
 
   .about h2 {
-  font-size: var(--font-md);
-  text-align: center;
-  padding: 60px 20px 0px 20px;
-  color: var(--col-dark-green);
+    font-size: var(--font-md);
+    text-align: center;
+    padding: 60px 20px 0px 20px;
+    color: var(--col-dark-green);
   }
 
-
-
-
-
- .team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-bottom: 60px;
- }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 60px;
+  }
 
   .media {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
- }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
- .media h3 {
-  padding-top: 20px;
- }
- .latest-courses {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+  .media h3 {
+    padding-top: 20px;
+  }
+  .latest-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - 800px and Above
 ——————————————————————————————————————————- */
-@media screen and (min-width: 800px){
-
-  .head-text img {
-    width: 60%;
+@media screen and (min-width: 800px) {
+  .about img {
+    display: none;
   }
 
-.about img {
-  display: none;
+  .head-text img {
+    padding: 50px 40px;
+  }
 }
-
-.head-text img {
-  padding: 50px 40px;
-}
-
-}
-
-
 
 /* ———————————————————————————————————————-
      MEDIA QUERIES - LARGE TABLETS & LAPTOP  STYLES
@@ -580,27 +561,33 @@ span.icon-bar {
 
 @media screen and (min-width: 1100px) {
   .head-text img {
-    width: 80%;
+    width: 60%;
   }
   .latest-courses {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .latest-news {
+    height: 50vh;
+    
+  }
+
   .latest-news h2 {
     color: var(--col-white);
-    font-size: var(--font-lg);
+    font-size: var(--font-xl);
     text-transform: uppercase;
     font-style: italic;
+    padding-top: 60px;
   }
-  
+
   .latest-news h3 {
-    font-size: var(--font-md);
+    font-size: var(--font-lg);
     text-align: center;
     padding: 30px 10px;
     color: yellow;
   }
-  
+
   .latest-news a {
     text-decoration: none;
     color: greenyellow;
@@ -610,15 +597,30 @@ span.icon-bar {
 
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     padding: 180px 0px;
-  
-   }
+  }
 
-   .team-grid h2 {
+  .team-grid h2 {
     font-size: var(--font-xl);
-   }
-   .team-grid h3 {
+  }
+
+  .team-grid h2::after {
+    /*this selector adds the green line under the links ready for transition*/
+    content: ""; /*this makes the line 0 wide until we add transition*/
+    width: 0%;
+    height: 2px;
+    background: rgb(72, 222, 72);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+
+  .team-grid h2:hover:after {
+    width: 80%;
+  }
+
+  .team-grid h3 {
     font-size: var(--font-md);
-   }
+  }
 }
